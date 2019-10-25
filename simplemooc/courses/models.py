@@ -21,7 +21,7 @@ class Course(models.Model):
     description = models.TextField('Descrição Simples', blank=True)
     about = models.TextField('Sobre o Curso', blank=True)
     start_date = models.DateField(
-        'Data de Início', null=True, blank=True
+        'Data de Início', auto_now_add=True
     )
     image = models.ImageField(
         upload_to='courses/images', verbose_name='Imagem',

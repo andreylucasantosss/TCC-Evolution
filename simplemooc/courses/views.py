@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.template.defaultfilters import slugify
+from datetime import datetime
 
 from .models import Course, Enrollment, Announcement, Lesson, Material
 from .forms import ContactCourse, CommentForm,AnnouncementForm,CourseForm,LessonForm,MaterialForm
@@ -27,6 +28,7 @@ def create(request):
         if form.is_valid():
             create = form.save(commit=False)
             create.slug = slugify(create.name)
+            create.start_date = datetime.today().strftime('%Y/%m/%d')
             create.save()
             messages.success(request, 'Curso cadastrado com sucesso')
                     
@@ -209,15 +211,16 @@ def material(request, slug, pk):
     course = request.course
     material = get_object_or_404(Material, pk=pk, lesson__course=course)
     lesson = material.lesson
+    url_video = "videos/" + str(material.file)[18:]
+    print(url_video)
     if not request.user.is_staff and not lesson.is_available():
         messages.error(request, 'Este material não está disponível')
         return redirect('courses:lesson', slug=course.slug, pk=lesson.pk)
-    if not material.is_embedded():
-        return redirect(material.file.url)
     template = 'courses/material.html'
     context = {
         'course': course,
         'lesson': lesson,
         'material': material,
+        'url' : url_video
     }
     return render(request, template, context)

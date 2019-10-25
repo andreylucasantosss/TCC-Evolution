@@ -1,4 +1,6 @@
 {% extends "courses/course_dashboard.html" %}
+{% load static %}
+
 
 {% block breadcrumb %}
     {{ block.super }}
@@ -12,7 +14,9 @@
 
 {% block dashboard_content %}
 <div class="well">
-    <h2><a href="{% url 'courses:material' course.slug material.pk %}">{{ material }}</a></h2>
+        <video width="530" height="440" controls autoplay>
+            <source src="{% static 'videos/Insightfy_-_Homepage.mp4' %}" type="video/mp4"> </source>
+        </video>
     {{ material.embedded|safe }}
     <p>
         <a href="{% url 'courses:lesson' course.slug lesson.pk %}">Voltar</a>
