@@ -11,9 +11,7 @@
                 <div class="l-box">
       {% csrf_token %}
       {{form}}
-      {% if user.is_staff %}
       <button type="submit" class="pure-button pure-button-primary">Criar Curso</button>
-      {% endif %}             
       </div>
 
     </div>
