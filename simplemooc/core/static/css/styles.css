@@ -6,9 +6,10 @@
 body {
     margin: 0 auto;
     line-height: 1.7em;
+    background-color: #f5f1e9
 }
 a {
-    color: #3b8bba;
+    color: #b18048;
 }
 .content {
     padding-top: 2em;
@@ -21,10 +22,10 @@ a {
 }
 .header .pure-menu {
     padding: 0.5em;
-    background-color: #2d3e50;
+    background-color: #bb8343;
 }
 .header .pure-menu a {
-    color: #fff;
+    color: rgb(250, 245, 245);
 }
 .header .pure-menu li a:hover,
 .header .pure-menu li a:focus {
@@ -41,10 +42,10 @@ a {
 .home-menu {
     padding: 0.5em;
     text-align: left;
-    box-shadow: 0 1px 1px rgba(0,0,0, 0.10);
+    box-shadow: 0 1px 1px rgba(197, 15, 15, 0.938);
 }
 .home-menu.pure-menu-open {
-    background: #2d3e50;
+    background: #eb7c21;
 }
 .pure-menu.pure-menu-open.pure-menu-fixed {
     border-bottom: none;
@@ -61,30 +62,32 @@ a {
 }
 
 .home-menu a {
-    color: #6FBEF3;
+    color: rgb(161, 114, 69);
 }
 .home-menu li a:hover,
 .home-menu li a:focus {
     background: none;
     border: none;
-    color: #AECFE5;
+    color: #eb7c21;
 }
 body .primary-button {
-    background: #02a6eb;
+    background: #a5530f;
     color: #fff;
 }
 .splash {
     margin: 0 auto;
-    padding: 1.5em 1em 0;
-    background: #eee;
+    padding: 2.0em 1em 0;
+    background-image: url("https://image.freepik.com/fotos-gratis/canetas-e-lapis-coloridos_23-2147650791.jpg");
+    background-size: contain;
 }
 .splash .splash-head {
-    font-size: 300%;
-    margin: 0em 0;
-    line-height: 1.2em;
+    color: rgba(146, 63, 7, 0.89);
+    font-size: 250%;
+    text-align: right;
+    line-height: 1.6em;
 }
 .splash .splash-subhead {
-    color: #999;
+    color: rgb(99, 75, 44);
     font-weight: 300;
     line-height: 1.4em;
 }
@@ -92,7 +95,7 @@ body .primary-button {
     font-size: 150%;
 }
 .content .content-subhead {
-    color: #999;
+    color: rgb(99, 75, 44);
     padding-bottom: 0.3em;
     text-transform: uppercase;
     margin: 0;
@@ -113,7 +116,7 @@ body .primary-button {
     font-weight: normal;
 }
 .footer {
-    background: #2d3e50;
+    background: #eb7c21;
     color: #fff;
     text-align: center;
     padding: 1em;
@@ -145,7 +148,7 @@ form.pure-form-aligned ul.errorlist li {
     font-size: 100%;
     width: 100%;
     max-width: 350px;
-    margin-bottom: 0.3em;
+    margin-bottom: center;
 }
 .pure-form textarea {
     max-width: 450px;
@@ -154,7 +157,7 @@ form.pure-form-aligned ul.errorlist li {
     margin-bottom: 1em;
 }
 .pure-button-primary {
-    background-color: #1f8dd6;
+    background-color: #8f654d;
     color: white;
     padding: 0.5em 2em;
     border-radius: 5px;
@@ -177,7 +180,7 @@ ul.breadcrumb li a {
     padding: 0.3em 0.7em;
 }
 aside {
-    background: #1f8dd6;
+    background: #d6871f;
     padding: 0.3em 1em;
     border-radius: 3px;
     color: #fff;
@@ -225,7 +228,7 @@ table.full {
 }
 
 .button-secondary {
-    background: rgb(66, 184, 221); /* this is a light blue */
+    background: rgb(230, 156, 71); /* this is a light blue */
 }
 body {
     min-width: 320px;
@@ -235,7 +238,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
     font-weight: bold;
-    color: rgb(75, 75, 75);
+    color: rgb(114, 75, 44);
 }
 h3 {
     font-size: 1.25em;
@@ -245,7 +248,7 @@ h4 {
 }
 
 a {
-    color: #3b8bba; /* block-background-text-normal */
+    color: #ad6624; /* block-background-text-normal */
     text-decoration: none;
 }
 
@@ -257,13 +260,13 @@ dd {
 }
 
 aside {
-    background: #1f8dd6; /* same color as selected state on site menu */
+    background: #e68f1d; /* same color as selected state on site menu */
     padding: 0.3em 1em;
     border-radius: 3px;
     color: #fff;
 }
 aside a, aside a:visited {
-    color: rgb(169, 226, 255);
+    color: rgb(184, 131, 63);
 }
 .well {
     border: 1px solid #ddd;
@@ -272,4 +275,32 @@ aside a, aside a:visited {
 }
 .fright {
     float: right;
+}
+
+.splash2 {
+    margin: 0 auto;
+    padding: 2.0em 1em 0;
+    background-image: url("https://image.freepik.com/fotos-gratis/canetas-e-lapis-coloridos_23-2147650791.jpg");
+    background-size: contain;
+}
+
+.splash2 .splash-head2 {
+    color: rgba(121, 64, 27, 0.89);
+    font-size: 180%;
+    text-align: left;
+    line-height: 1.4em;
+}    
+
+.content .content-subhead2 {
+    color: rgb(99, 75, 44);
+    padding-bottom: 0.3em;
+    text-transform: uppercase;
+    margin: 0;
+    border-bottom: 2px solid #eee;
+    display: inline-block;
+
+}
+
+.l-box2 {
+    margin: center;
 }
