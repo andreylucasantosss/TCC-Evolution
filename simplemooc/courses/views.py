@@ -28,7 +28,7 @@ def create(request):
         if form.is_valid():
             create = form.save(commit=False)
             create.slug = slugify(create.name)
-            create.start_date = datetime.today().strftime('%Y/%m/%d')
+            #create.start_date = datetime.today().strftime('%Y/%m/%d')
             create.save()
             messages.success(request, 'Curso cadastrado com sucesso')
                     
@@ -181,8 +181,8 @@ def lessons(request, slug):
     course = request.course
     template = 'courses/lessons.html'
     lessons = course.release_lessons()
-    if request.user.is_staff:
-        lessons = course.lessons.all()
+
+    lessons = course.lessons.all()
     context = {
         'course': course,
         'lessons': lessons
