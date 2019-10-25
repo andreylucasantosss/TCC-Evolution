@@ -1,0 +1,21 @@
+{% extends "courses/course_dashboard.html" %}
+
+{% block dashboard_content %}
+
+<form enctype="multipart/form-data" class="pure-form pure-form-stacked" method="POST">
+    <div class="pure-control-group">
+      {% csrf_token %}
+      {{form}}
+      <button type="submit" class="pure-button pure-button-primary">Criar Material</button>
+
+
+     </div>
+
+
+  <div class="pure-controls">
+  </div>
+
+
+</form>
+
+{% endblock %}
