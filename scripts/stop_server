@@ -1,0 +1,5 @@
+#!/bin/bash
+isExistApache=`pgrep apache2`
+if [[ -n  $isExistApache ]];then
+    systemctl stop apache2
+fi
