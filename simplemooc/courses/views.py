@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.template.defaultfilters import slugify
+from datetime import datetime
 
 from .models import Course, Enrollment, Announcement, Lesson, Material
 from .forms import ContactCourse, CommentForm,AnnouncementForm,CourseForm,LessonForm,MaterialForm
@@ -27,6 +28,7 @@ def create(request):
         if form.is_valid():
             create = form.save(commit=False)
             create.slug = slugify(create.name)
+            create.start_date = datetime.today().strftime('%Y/%m/%d')
             create.save()
             messages.success(request, 'Curso cadastrado com sucesso')
                     

@@ -63,6 +63,7 @@ class CourseForm(forms.ModelForm):
 
 
     slug = forms.HiddenInput()
+    #start_date = forms.HiddenInput()
 
     class Meta:
         model = Course
