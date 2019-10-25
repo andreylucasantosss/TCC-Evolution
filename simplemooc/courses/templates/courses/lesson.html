@@ -9,7 +9,9 @@
 {% endblock %}
 
 {% block dashboard_content %}
+{% if user.is_staff %}
 <a href="{% url 'courses:create_material' course.slug %} " class="pure-button pure-button-primary" >Criar </a>
+{% endif %}             
 <div class="well">
     <h2><a href="{% url 'courses:lesson' course.slug lesson.pk %}">{{ lesson }}</a></h2>
     {{ lesson.description|linebreaks }}

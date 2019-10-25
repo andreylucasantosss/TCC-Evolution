@@ -7,8 +7,10 @@
 {% endblock %}
 
 {% block dashboard_content %}
-{% for lesson in lessons %}
+{% for lesson in lessons %}    
+{% if user.is_staff %}      
 <a href="{% url 'courses:create_aula' course.slug %} " class="pure-button pure-button-primary" >Criar </a>
+{% endif %}  
 <div class="well">
     <h2><a href="{% url 'courses:lesson' course.slug lesson.pk %}">{{ lesson }}</a></h2>
     <p>

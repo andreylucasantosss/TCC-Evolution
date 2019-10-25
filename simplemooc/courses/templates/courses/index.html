@@ -17,9 +17,9 @@
         </div>
         <form method="POST">
         <div class="pure-controls">
-
+            {% if user.is_staff %}
             <a href="{% url 'courses:create' %}" class="pure-button pure-button-primary">Criar</a>
-
+            {% endif %}  
         </div>
         </form>
     </div>

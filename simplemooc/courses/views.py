@@ -194,8 +194,7 @@ def lessons(request, slug):
 def lesson(request, slug, pk):
     course = request.course
     lesson = get_object_or_404(Lesson, pk=pk, course=course)
-    print(lesson)
-    if not request.user.is_staff and not lesson.is_available():
+    if lesson.is_available():
         messages.error(request, 'Esta aula não está disponível')
         return redirect('courses:lessons', slug=course.slug)
     template = 'courses/lesson.html'
@@ -213,7 +212,7 @@ def material(request, slug, pk):
     lesson = material.lesson
     url_video = "videos/" + str(material.file)[18:]
     print(url_video)
-    if not request.user.is_staff and not lesson.is_available():
+    if lesson.is_available():
         messages.error(request, 'Este material não está disponível')
         return redirect('courses:lesson', slug=course.slug, pk=lesson.pk)
     template = 'courses/material.html'
