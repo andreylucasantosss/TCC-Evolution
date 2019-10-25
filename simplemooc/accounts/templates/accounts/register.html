@@ -1,10 +1,17 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="pure-g-r content-ribbon">
+<div class="splash2">
+        <div class="pure-g-r">
+                    <div class="pure-u-1">
+                            <div class="l-box splash-text">
+                                        <div class="pure-u-1">
+</div> </div> </div> </div> </div>
     <div class="pure-u-1">
-        <h2>Informe seus dados</h2>
-        <form class="pure-form pure-form-stacked" method="post">
+        <h3>Eba! Você se interessou na nossa plataforma! Ficamos felizes em te ajudar nesse processo.</h3>
+             <p><h4>Para obter o acesso, será necessário que você nos informe os seguintes dados:</h4>
+                <div class="l-box2">
+                            <form class="pure-form pure-form-stacked" method="post">
             {% csrf_token %}
             <fieldset>
                 {{ form.non_field_errors }}
@@ -23,5 +30,6 @@
             </fieldset>
         </form>
     </div>
+</div>
 </div>
 {% endblock %}
