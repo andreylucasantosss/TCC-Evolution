@@ -6,7 +6,7 @@
 body {
     margin: 0 auto;
     line-height: 1.7em;
-    background-color: #f5f1e9
+    background-color: #e9f1efbb
 }
 a {
     color: #b18048;
@@ -42,10 +42,10 @@ a {
 .home-menu {
     padding: 0.5em;
     text-align: left;
-    box-shadow: 0 1px 1px rgba(197, 15, 15, 0.938);
+    box-shadow: 0 1px 1px rgba(17, 148, 209, 0.938);
 }
 .home-menu.pure-menu-open {
-    background: #eb7c21;
+    background: #1191b1;
 }
 .pure-menu.pure-menu-open.pure-menu-fixed {
     border-bottom: none;
@@ -68,7 +68,7 @@ a {
 .home-menu li a:focus {
     background: none;
     border: none;
-    color: #eb7c21;
+    color:  #14b9e2;
 }
 body .primary-button {
     background: #a5530f;
@@ -77,17 +77,18 @@ body .primary-button {
 .splash {
     margin: 0 auto;
     padding: 2.0em 1em 0;
-    background-image: url("https://image.freepik.com/fotos-gratis/canetas-e-lapis-coloridos_23-2147650791.jpg");
-    background-size: contain;
+    background-image: url("/static/img/site.png");
+    background-position: center;
+     
 }
 .splash .splash-head {
-    color: rgba(146, 63, 7, 0.89);
+    color: rgba(243, 243, 243, 0.123);
     font-size: 250%;
     text-align: right;
     line-height: 1.6em;
 }
 .splash .splash-subhead {
-    color: rgb(99, 75, 44);
+    color: rgb(26, 72, 131);
     font-weight: 300;
     line-height: 1.4em;
 }
@@ -95,7 +96,7 @@ body .primary-button {
     font-size: 150%;
 }
 .content .content-subhead {
-    color: rgb(99, 75, 44);
+    color: rgb(35, 68, 146);
     padding-bottom: 0.3em;
     text-transform: uppercase;
     margin: 0;
@@ -116,7 +117,7 @@ body .primary-button {
     font-weight: normal;
 }
 .footer {
-    background: #eb7c21;
+    background: #1191b1;
     color: #fff;
     text-align: center;
     padding: 1em;
@@ -157,7 +158,7 @@ form.pure-form-aligned ul.errorlist li {
     margin-bottom: 1em;
 }
 .pure-button-primary {
-    background-color: #8f654d;
+    background-color: #14b9e2;
     color: white;
     padding: 0.5em 2em;
     border-radius: 5px;
@@ -180,7 +181,7 @@ ul.breadcrumb li a {
     padding: 0.3em 0.7em;
 }
 aside {
-    background: #d6871f;
+    background: #20a1c2;
     padding: 0.3em 1em;
     border-radius: 3px;
     color: #fff;
@@ -232,13 +233,13 @@ table.full {
 }
 body {
     min-width: 320px;
-    color: #777;
+    color: rgb(32, 32, 32);
     line-height: 1.6;
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-weight: bold;
-    color: rgb(114, 75, 44);
+    color: rgb(86, 111, 124);
 }
 h3 {
     font-size: 1.25em;
@@ -248,7 +249,7 @@ h4 {
 }
 
 a {
-    color: #ad6624; /* block-background-text-normal */
+    color: #1668c7; /* block-background-text-normal */
     text-decoration: none;
 }
 
@@ -260,13 +261,13 @@ dd {
 }
 
 aside {
-    background: #e68f1d; /* same color as selected state on site menu */
+    background: #14b9e2; /* same color as selected state on site menu */
     padding: 0.3em 1em;
     border-radius: 3px;
     color: #fff;
 }
 aside a, aside a:visited {
-    color: rgb(184, 131, 63);
+    color: rgb(50, 130, 195);
 }
 .well {
     border: 1px solid #ddd;
@@ -280,8 +281,8 @@ aside a, aside a:visited {
 .splash2 {
     margin: 0 auto;
     padding: 2.0em 1em 0;
-    background-image: url("https://image.freepik.com/fotos-gratis/canetas-e-lapis-coloridos_23-2147650791.jpg");
-    background-size: contain;
+    background-image: url("/static/img/site2.png");
+
 }
 
 .splash2 .splash-head2 {
