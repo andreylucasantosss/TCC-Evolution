@@ -286,15 +286,29 @@ aside a, aside a:visited {
 
 }
 
-.splash2 .splash-head2 {
-    color: rgba(121, 64, 27, 0.89);
+.splash3 {
+    margin: 0 auto;
+    padding: 2.0em 1em 0;
+    background-image: url("https://cdn.pixabay.com/photo/2018/09/16/21/06/colored-pencils-3682424_960_720.jpg");
+    background-size: contain;
+}
+
+.splash4 {
+    margin: 0 auto;
+    padding: 2.0em 1em 0;
+    background-image: url("/static/img/cursos.jpg");
+    background-size: contain;
+}
+
+.splash4 .splash-head2 {
+    color: rgba(12, 101, 184, 0.89);
     font-size: 180%;
     text-align: left;
     line-height: 1.4em;
 }    
 
 .content .content-subhead2 {
-    color: rgb(99, 75, 44);
+    color: rgb(246, 246, 246);
     padding-bottom: 0.3em;
     text-transform: uppercase;
     margin: 0;
