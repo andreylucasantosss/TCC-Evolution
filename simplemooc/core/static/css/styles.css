@@ -6,7 +6,7 @@
 body {
     margin: 0 auto;
     line-height: 1.7em;
-    background-color: #e9f1efbb
+    background-color: #e9f1efbb;
 }
 a {
     color: #b18048;
@@ -122,7 +122,9 @@ body .primary-button {
     text-align: center;
     padding: 1em;
     font-size: 80%;
-    
+    position: fixed;
+    bottom:0;
+    width:100%;
 }
 ul.errorlist {
     margin: 0;
@@ -319,4 +321,24 @@ aside a, aside a:visited {
 
 .l-box2 {
     margin: center;
+}
+
+.div1 {
+    position: absolute;
+    width: 350px;
+    height: 300px;
+    top: 50%;
+    left: 50%;
+    margin-left: -175px;
+    margin-top: -150px;
+    }
+
+.div2 {
+    position: absolute;
+    width: 350px;
+    height: 300px;
+    top: 50%;
+    left: 50%;
+    margin-left: -195px;
+    margin-top: -190px;
 }
