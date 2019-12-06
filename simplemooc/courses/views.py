@@ -3,6 +3,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.template.defaultfilters import slugify
 from datetime import datetime
+from django.shortcuts import render_to_response
 
 from .models import Course, Enrollment, Announcement, Lesson, Material
 from .forms import ContactCourse, CommentForm,AnnouncementForm,CourseForm,LessonForm,MaterialForm
@@ -51,19 +52,25 @@ def details(request, slug):
     template_name = 'courses/details.html'
     return render(request, template_name, context)
 
-@login_required
+#@login_required
 def enrollment(request, slug):
-    course = get_object_or_404(Course, slug=slug)
-    enrollment, created = Enrollment.objects.get_or_create(
-        user=request.user, course=course
-    )
-    if created:
-        # enrollment.active()
-        messages.success(request, 'Você foi inscrito no curso com sucesso')
-    else:
-        messages.info(request, 'Você já está inscrito no curso')
+    try:
+        course = get_object_or_404(Course, slug=slug)
+        enrollment, created = Enrollment.objects.get_or_create(
+            user=request.user, course=course
+        )
+        ##if not request.user:
+        ## return redirect("accounts:user_login")
+        print(request.user)  
+        if created:
+            # enrollment.active()
+            messages.success(request, 'Você foi inscrito no curso com sucesso')
+        else:
+            messages.info(request, 'Você já está inscrito no curso')
 
-    return redirect('accounts:dashboard')
+        return redirect('accounts:dashboard')
+    except:
+        return redirect("accounts:user_login")
 
 @login_required
 def undo_enrollment(request, slug):
@@ -209,9 +216,9 @@ def lesson(request, slug, pk):
 def material(request, slug, pk):
     course = request.course
     material = get_object_or_404(Material, pk=pk, lesson__course=course)
-    lesson = material.lesson
-    url_video = "videos/" + str(material.file)[18:]
-    print(url_video)
+    lesson = material.lesson    
+    video = 'videos/'+str(material.file).split("/")[-1]
+    print(video)
     if lesson.is_available():
         messages.error(request, 'Este material não está disponível')
         return redirect('courses:lesson', slug=course.slug, pk=lesson.pk)
@@ -220,6 +227,6 @@ def material(request, slug, pk):
         'course': course,
         'lesson': lesson,
         'material': material,
-        'url' : url_video
+        'video' : video
     }
     return render(request, template, context)

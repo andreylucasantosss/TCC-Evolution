@@ -47,7 +47,7 @@ SILENCED_SYSTEM_CHECKS = [
 
 TEMPLATE_DEBUG = False
 
-ALLOWED_HOSTS = [*]
+ALLOWED_HOSTS = ["*"]
 
 #CSRF_COOKIE_SECURE = False
 
@@ -121,8 +121,8 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'simplemooc', 'media')
-MEDIA_URL = '/media/'
+#$#MEDIA_ROOT = os.path.join(BASE_DIR, 'simplemooc', 'media')
+#MEDIA_URL = '/media/'
 
 # E-mails
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
