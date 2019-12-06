@@ -30,12 +30,12 @@ def user_login(request):
             user = authenticate(username=username, password=password)
             if user is not None:
                 login(request, user)
-                messages.info(request, f"You are now logged in as {username}")
+                messages.info(request, f"Bem vindo {username}")
                 return redirect('/')
             else:
-                messages.error(request, "Invalid username or password.")
+                messages.error(request, "Invalido usuario ou senha.")
         else:
-            messages.error(request, "Invalid username or password.")
+            messages.error(request, "Invalido usuario ou senha.")
     form = AuthenticationForm()
     return render(request = request,
                     template_name = "accounts/login.html",

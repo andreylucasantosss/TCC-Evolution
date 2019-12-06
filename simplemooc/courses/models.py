@@ -1,9 +1,10 @@
 from django.db import models
 from django.conf import settings
 from django.utils import timezone
+import os
 
 from simplemooc.core.mail import send_mail_template
-
+BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 class CourseManager(models.Manager):
 
@@ -81,7 +82,7 @@ class Material(models.Model):
 
     name = models.CharField('Nome', max_length=100)
     embedded = models.TextField('Vídeo embedded', blank=True)
-    file = models.FileField(upload_to='lessons/materials')
+    file = models.FileField(upload_to=os.path.join(BASE_DIR,'core','static','videos'))
     lesson = models.ForeignKey(Lesson, verbose_name='Aula', related_name='materials',on_delete=models.DO_NOTHING)
 
     objects = models.Manager()
